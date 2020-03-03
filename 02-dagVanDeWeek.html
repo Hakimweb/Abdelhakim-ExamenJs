@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dag van de Week</title>
+  </head>
+
+  <body>
+    <p id="dag"></p>
+    <script>
+      var today, tekst;
+      today = new Date();
+      var day = [
+        "zondag",
+        "maandag",
+        "dinsdag",
+        "woensdag",
+        "donderdag",
+        "vrijdag",
+        "zaterdag"
+      ];
+
+      if (today.getDay() < 2) {
+        tekst = "Het is weekend, even bekomen.";
+      } else {
+        tekst = "Het is een werkdag, aan de slag dus.";
+      }
+      document.getElementById("dag").innerHTML =
+        "Vandaag is: " + day[today.getDay()] + ". " + tekst;
+    </script>
+  </body>
+</html>
