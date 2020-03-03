@@ -21,8 +21,8 @@
     </script>
 
     <script>
-      var filename = "'javaScriptFrameWork'";
-      document.write("<br> De originele filename is: " + filename);
+      var naam = "'javaScriptFrameWork'";
+      document.write("<br> De originele filename is: " + naam);
     </script>
 
     <script>
@@ -36,6 +36,23 @@
         "<p> De filename kan beter in kleine letters getypt worden " +
           naam.toLowerCase() +
           "</p>"
+      );
+    </script>
+
+    <script>
+      var naam = "'javascriptframework'";
+      var substr1 = naam.substring(0, 11) + "'";
+      var substr2 = "'" + naam.substring(11);
+      naam.substring(0, 11) + "'";
+      document.write(
+        "Als je " +
+          naam +
+          " opsplitst, krijg je: " +
+          substr1 +
+          " en " +
+          substr2 +
+          "." +
+          "<br>"
       );
     </script>
 
