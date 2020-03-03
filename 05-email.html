@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var email = "Jan.klaassen@mail.com";
+      document.write(
+        "<p>In 'Jan.klaassen@mail.com' staat de @ op positie: " +
+          email.indexOf("@") +
+          "</p>"
+      );
+
+      var string = "Jan.klaassen@mail.com";
+      var string =
+        string.substr(0, string.indexOf("@mail.com")) +
+        string.substr(string.indexOf("@mail.com") + 10, string.length);
+      document.write("<br />De naam is: " + "'" + string + "'");
+    </script>
+  </body>
+</html>
