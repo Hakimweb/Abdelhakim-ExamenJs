@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p><label>Zin:</label><br>
+  <input type="text" id="zin"><br><br>
+  
+  <label >Zoek dit woord:</label></p>
+  <input type="text" id="zoek"  ><br><br>
+  
+  <label >Dit woord komt in de plaats:</label>
+  <input type="text" id="verv" ><br><br>  
+<button onclick="myFunction()">Vervang</button>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var zin = document.getElementById("zin").value; 
+  var zoek= document.getElementById("zoek").value;
+  var verv= document.getElementById("verv").value;
+  var res = zin.replace(zoek, verv);
+  
+  if (!!res) {
+    document.getElementById("demo").innerHTML = 'De nieuwe zin: ' + '<br>' + res ;
+} else {
+    document.getElementById("demo").innerHTML = 'Dit woord is niet gevonden!' ;
+}    
+}
+</script>
+</body>
+</html>

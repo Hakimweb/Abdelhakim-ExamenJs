@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+  <html>
   <body>
-    <button type="button" onClick="toonTekst()">C° naar F°</button>
-    <p><a id="tekst"> </a></p>
+  <p>
+  <label>Geef Temperatuur</label>
+  <input id="inputTemp" type="number" placeholder="Temperatuur" >
+</p>
+  <button type="button" onClick="cToF()">Omzetten C naar F </button>
+  <button type="button" onClick="fToC()">Omzetten F naar C </button>    
+  <script>  
+function cToF() 
+{
+  var cTemp = document.getElementById("inputTemp").value;
+  var cToFahr = cTemp * 9 / 5 + 32;
+  var omzet = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';  
+    alert( omzet);
+}
+function fToC() 
+{
+  var fTemp = document.getElementById("inputTemp").value;
+  var fToCel = (fTemp - 32) * 5 / 9;
+  var omzet = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+   alert( omzet); 
+} 
+</script>  
+</body>
+ </html>
 
-    <button type="button" onClick="toonTekst2()">F° naar C°</button>
-    <p><a id="tekst2"> </a></p>
-
-    <script>
-        
-
-    </script>
-  </body>
-</html>

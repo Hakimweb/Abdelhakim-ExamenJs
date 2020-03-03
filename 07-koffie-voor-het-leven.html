@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html>
+  <body>
+  <p>
+  <label>Geef je geboortejaar</label>
+  <input id="inputGebd" type="number" placeholder="Geboortejaar" oninput="cToF(this.value)"
+  onchange="cToF(this.value)">
+  
+</p>
+ <p>
+  <label>Hoe oud denk je te worden</label>
+  <input id="inputLeeft" type="number" placeholder="Leeftijd" oninput="cToF(this.value)"
+  onchange="cToF(this.value)">
+</p>
+ <p>
+  <label>Aantal koppen koffie per dag</label>
+  <input id="inputKoffie" type="number" placeholder="Koffie per dag" oninput="cToF(this.value)"
+  onchange="cToF(this.value)">
+  
+</p>
+
+<p id="demo"></p>
+  <script>  
+  
+function cToF() 
+{
+var today = new Date();
+var leeftijd = document.getElementById("inputGebd").value - today.getFullYear();
+var kopKoffie = document.getElementById("inputKoffie").value;
+var jaar = 356;
+var leeftijdsKoffie = document.getElementById("inputLeeft").value * jaar;
+
+document.getElementById("demo").innerHTML =  'je bent nu ' +  leeftijd +'. ' + 'Tegen ' + kopKoffie + ' koppen koffie per dag zal je ' + leeftijdsKoffie + ' koppen koffie drinken als je 100 jaar oud zal worden';
+}
+
+</script>  
+</body>
+ </html>
